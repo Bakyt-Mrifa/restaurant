@@ -13,11 +13,12 @@ public class Prices {
     @Id
     @GeneratedValue
     @Column(name = "price_id")
-    private Long priceId;
+    private Long id;
     private double price;
     private Date startDate;
     private Date endDate;
-    @OneToOne
+
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "dish_id")
-    private Dishes dishId;
+    private Dishes dish;
 }

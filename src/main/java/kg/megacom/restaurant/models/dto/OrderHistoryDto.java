@@ -1,18 +1,18 @@
 package kg.megacom.restaurant.models.dto;
 
+import kg.megacom.restaurant.enums.OrderStatus;
 import kg.megacom.restaurant.models.domain.Orders;
-import kg.megacom.restaurant.models.domain.Restaurant;
+import kg.megacom.restaurant.models.domain.Users;
 import lombok.Data;
 
 import java.util.Date;
 
 @Data
-public class RestaurantOrdersDto {
+public class OrderHistoryDto {
     private Long id;
-    private Restaurant restaurant;
-    private Orders order;
-    private boolean  isReady;
     private Date startDate;
     private Date endDate;
-
+    private Users user;
+    private Orders order;
+    private OrderStatus status;
 }

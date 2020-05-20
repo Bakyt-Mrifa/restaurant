@@ -2,11 +2,9 @@ package kg.megacom.restaurant.models.dto;
 
 import lombok.Data;
 
-import javax.persistence.*;
-
 @Data
 public class RestaurantDto {
-    private Long restaurantId;
+    private Long id;
     private String name;
     private boolean isActive;
 }

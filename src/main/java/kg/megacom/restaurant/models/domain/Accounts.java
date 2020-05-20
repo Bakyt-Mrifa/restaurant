@@ -6,12 +6,15 @@ import javax.persistence.*;
 
 @Data
 @Entity
-@Table(name = "accaunts")
-public class Accaunts {
+@Table(name = "accounts")
+public class Accounts {
     @Id
     @GeneratedValue
-    @Column(name = "user_id")
-    private Long userId;
+    @Column(name = "account_id")
+    private Long id;
+    @Column(length = 50)
     private String login;
+    @Column(length = 50)
     private String password;
+
 }

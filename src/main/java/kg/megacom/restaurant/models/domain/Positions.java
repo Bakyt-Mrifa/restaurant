@@ -12,7 +12,10 @@ public class Positions {
     @Id
     @GeneratedValue
     @Column(name = "position_id")
-    private Long positionId;
+    private Long id;
+
+    @Column(length = 50)
     private String positionName;
+
     private boolean isActive;
 }

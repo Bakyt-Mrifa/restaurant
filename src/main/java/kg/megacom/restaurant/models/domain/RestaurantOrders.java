@@ -13,14 +13,19 @@ public class RestaurantOrders {
     @Id
     @GeneratedValue
     @Column(name = "restaurant_orders_id")
-    private Long restaurantOrderId;
-    @OneToOne                                  //???????????????
+    private Long id;
+
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "restaurant_id")
-    private Restaurant restaurantId;
-    @OneToMany                                  //??????????????
+    private Restaurant restaurant;
+
+    @ManyToOne(fetch = FetchType.EAGER )
     @JoinColumn(name = "order_id")
-    private Orders orderId;
+    private Orders order;
+
+    @Column(name = "is_ready")
     private boolean  isReady;
+
     @JsonFormat(pattern = "dd.MM.yyyy")
     private Date startDate;
     @JsonFormat(pattern = "dd.MM.yyyy")

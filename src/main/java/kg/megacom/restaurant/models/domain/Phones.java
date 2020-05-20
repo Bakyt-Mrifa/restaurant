@@ -11,11 +11,11 @@ public class Phones {
     @Id
     @GeneratedValue
     @Column(name = "phone_id")
-    private Long phoneId;
+    private Long id;
+
+    @Column(length = 20)
     private String phoneNum;
+
     private boolean isActive;
     private boolean isMain;
-    @ManyToMany
-    @JoinColumn(name = "user_id")
-    private Users usersId;
 }

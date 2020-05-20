@@ -1,12 +1,13 @@
 package kg.megacom.restaurant.models.dto;
 
+import kg.megacom.restaurant.models.domain.Dishes;
+import kg.megacom.restaurant.models.domain.Orders;
 import lombok.Data;
 
 @Data
 public class OrderDetailsDto {
-    // @JsonProperty("orDetId")
-    private Long orderDetailId;
-    private OrdersDto orderId;
-    private DishesDto dishId;
-    private Integer amount;
+    private Long id;
+    private Orders orderId;
+    private Dishes dishId;
+    private Integer amount;;
 }

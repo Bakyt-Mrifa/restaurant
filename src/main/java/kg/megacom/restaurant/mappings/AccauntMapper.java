@@ -1,7 +1,7 @@
 package kg.megacom.restaurant.mappings;
 
-import kg.megacom.restaurant.models.domain.Accaunts;
-import kg.megacom.restaurant.models.dto.AccauntsDto;
+import kg.megacom.restaurant.models.domain.Accounts;
+import kg.megacom.restaurant.models.dto.AccountsDto;
 import org.mapstruct.Mapper;
 import org.mapstruct.MappingTarget;
 import org.mapstruct.factory.Mappers;
@@ -10,7 +10,7 @@ import org.mapstruct.factory.Mappers;
 public interface AccauntMapper {
 
     AccauntMapper INSTANCE = Mappers.getMapper(AccauntMapper.class);
-    Accaunts accountsDtoToAccaunt (AccauntsDto accauntsDto);
-    AccauntsDto accountsToAccauntDto (Accaunts accaunts);
-    void updateAccauntFromDto (AccauntsDto accauntsDto, @MappingTarget Accaunts accaunts);
+    Accounts accountsDtoToAccaunt (AccountsDto accountsDto);
+    AccountsDto accountsToAccauntDto (Accounts accounts);
+    void updateAccauntFromDto (AccountsDto accountsDto, @MappingTarget Accounts accounts);
 }

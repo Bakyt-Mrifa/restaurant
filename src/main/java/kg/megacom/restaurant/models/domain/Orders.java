@@ -13,11 +13,14 @@ public class Orders {
     @Id
     @GeneratedValue
     @Column(name = "order_id")
-    private Long orderId;
-    @OneToOne
+    private Long id;
+
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "customer_id")
-    private Customer customerId;
+    private Customer customer;
+
     @JsonFormat(pattern = "dd.MM.yyyy")
     private Date createDate;
+
     private double cost;
 }

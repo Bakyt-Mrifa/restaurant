@@ -11,7 +11,9 @@ public class Restaurant {
     @Id
     @GeneratedValue
     @Column(name = "restaurant_id")
-    private Long restaurantId;
+    private Long id;
+
+    @Column(length = 100)
     private String name;
     private boolean isActive;
 }

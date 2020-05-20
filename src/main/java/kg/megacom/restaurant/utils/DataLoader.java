@@ -15,7 +15,7 @@ import java.util.List;
 import static org.springframework.data.domain.ExampleMatcher.GenericPropertyMatchers.ignoreCase;
 
 @Component
-public class DataLoader implements ApplicationRunner {
+public class DataLoader {/*implements ApplicationRunner {
     private StatusesRepo statusesRepo1;
     @Autowired
     public DataLoader(StatusesRepo statusesRepo){
@@ -40,6 +40,6 @@ public class DataLoader implements ApplicationRunner {
                     }
                 });
 
-    }
+    }*/
 
 }
