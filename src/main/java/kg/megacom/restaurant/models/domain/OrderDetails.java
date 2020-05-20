@@ -13,11 +13,13 @@ public class OrderDetails {
     @GeneratedValue
     @Column(name = "order_detail_id")
     private Long id;
-    //@OneToOne
+
+    @OneToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "order_id")
-    private Orders orderId;
-    //@ManyToMany
-    //@JoinColumn(name = "dish_id")
-    private Dishes dishId;
-    private Integer amount;
+    private Orders orders;
+
+    @OneToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "dish_id")
+    private Dishes dishes;
+    private Byte amount;
 }

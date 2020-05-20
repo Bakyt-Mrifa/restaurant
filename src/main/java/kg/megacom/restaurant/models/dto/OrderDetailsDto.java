@@ -7,7 +7,7 @@ import lombok.Data;
 @Data
 public class OrderDetailsDto {
     private Long id;
-    private Orders orderId;
-    private Dishes dishId;
-    private Integer amount;;
+    private Orders orders;
+    private Dishes dishes;
+    private Integer amount;
 }
