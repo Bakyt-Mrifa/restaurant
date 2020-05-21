@@ -6,6 +6,8 @@ import org.mapstruct.Mapper;
 import org.mapstruct.MappingTarget;
 import org.mapstruct.factory.Mappers;
 
+import java.util.List;
+
 @Mapper
 public interface RestaurantMapper {
 
@@ -13,4 +15,7 @@ public interface RestaurantMapper {
     Restaurant restaurantDtoToRestaurant(RestaurantDto restaurantDto);
     RestaurantDto restaurantToRestaurantDto(Restaurant restaurant);
     void updateRestaurantFromDto(RestaurantDto restaurantDto, @MappingTarget Restaurant restaurant);
+
+    List<Restaurant> restaurantsDtoToRestaurant (List<RestaurantDto> restaurantDtos);
+    List<RestaurantDto> restaurantsToRestaurantDtos (List<Restaurant> restaurants);
 }
